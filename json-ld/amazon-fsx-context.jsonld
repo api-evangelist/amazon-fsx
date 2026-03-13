@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "fsx": "https://docs.aws.amazon.com/fsx/latest/APIReference/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "FileSystem": {
+      "@id": "fsx:FileSystem",
+      "@context": {
+        "fileSystemId": "fsx:fileSystemId",
+        "fileSystemType": "fsx:fileSystemType",
+        "lifecycle": "fsx:lifecycle",
+        "storageCapacity": "fsx:storageCapacity",
+        "storageType": "fsx:storageType",
+        "vpcId": "fsx:vpcId",
+        "subnetIds": {
+          "@id": "fsx:subnetIds",
+          "@container": "@list"
+        },
+        "dnsName": "fsx:dnsName",
+        "creationTime": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "tags": {
+          "@id": "fsx:tags",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "Backup": {
+      "@id": "fsx:Backup",
+      "@context": {
+        "backupId": "fsx:backupId",
+        "lifecycle": "fsx:lifecycle",
+        "type": "fsx:backupType",
+        "fileSystem": "fsx:fileSystem"
+      }
+    }
+  }
+}

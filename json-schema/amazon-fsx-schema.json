@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/amazon/fsx/filesystem.json",
+  "title": "Amazon FSx File System",
+  "description": "Represents an Amazon FSx file system with its associated configuration, state, and metadata.",
+  "type": "object",
+  "required": ["fileSystemId", "fileSystemType", "lifecycle"],
+  "properties": {
+    "fileSystemId": {
+      "type": "string",
+      "description": "The unique identifier of the file system",
+      "pattern": "^fs-[a-f0-9]{17}$"
+    },
+    "fileSystemType": {
+      "type": "string",
+      "enum": ["WINDOWS", "LUSTRE", "ONTAP", "OPENZFS"],
+      "description": "The type of file system"
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": ["AVAILABLE", "CREATING", "FAILED", "DELETING", "MISCONFIGURED", "UPDATING"],
+      "description": "The lifecycle status of the file system"
+    },
+    "storageCapacity": {
+      "type": "integer",
+      "description": "The storage capacity in GiB"
+    },
+    "storageType": {
+      "type": "string",
+      "enum": ["SSD", "HDD"],
+      "description": "The storage type of the file system"
+    },
+    "vpcId": {
+      "type": "string",
+      "description": "The ID of the VPC"
+    },
+    "subnetIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The IDs of the subnets"
+    },
+    "dnsName": {
+      "type": "string",
+      "description": "The DNS name for the file system"
+    },
+    "ownerId": {
+      "type": "string",
+      "description": "The AWS account that created the file system"
+    },
+    "creationTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time the file system was created"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags associated with the file system",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

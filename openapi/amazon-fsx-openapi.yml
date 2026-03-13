@@ -1,0 +1,84 @@
+openapi: 3.1.0
+info:
+  title: Amazon FSx API
+  description: >-
+    Amazon FSx provides fully managed file systems optimized for a variety of
+    workloads. This API enables you to create and manage file systems,
+    configure backups and snapshots, manage data repositories, and monitor
+    file system health across Lustre, Windows File Server, NetApp ONTAP,
+    and OpenZFS file system types.
+  version: '2018-03-01'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/contact-us/
+  termsOfService: https://aws.amazon.com/service-terms/
+externalDocs:
+  description: Amazon FSx API Reference
+  url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
+servers:
+  - url: https://fsx.{region}.amazonaws.com
+    description: Amazon FSx Regional Endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS Region
+tags:
+  - name: File Systems
+    description: Operations for creating and managing file systems
+  - name: Backups
+    description: Operations for creating and managing backups
+  - name: Snapshots
+    description: Operations for creating and managing snapshots
+  - name: Volumes
+    description: Operations for creating and managing volumes
+paths:
+  /:
+    post:
+      operationId: CreateFileSystem
+      summary: Create a new file system
+      description: Creates a new Amazon FSx file system of the specified type.
+      tags:
+        - File Systems
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - FileSystemType
+                - StorageCapacity
+                - SubnetIds
+              properties:
+                FileSystemType:
+                  type: string
+                  enum: [WINDOWS, LUSTRE, ONTAP, OPENZFS]
+                  description: The type of file system to create
+                StorageCapacity:
+                  type: integer
+                  description: Storage capacity in GiB
+                SubnetIds:
+                  type: array
+                  items:
+                    type: string
+                  description: Subnet IDs for the file system
+                SecurityGroupIds:
+                  type: array
+                  items:
+                    type: string
+                  description: Security group IDs
+                Tags:
+                  type: array
+                  items:
+                    type: object
+      responses:
+        '200':
+          description: File system created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  FileSystem:
+                    type: object
+                    description: The configuration of the file system
