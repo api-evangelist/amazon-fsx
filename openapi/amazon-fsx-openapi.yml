@@ -35,7 +35,7 @@ paths:
   /:
     post:
       operationId: CreateFileSystem
-      summary: Create a new file system
+      summary: Amazon FSx Create a new file system
       description: Creates a new Amazon FSx file system of the specified type.
       tags:
         - File Systems
