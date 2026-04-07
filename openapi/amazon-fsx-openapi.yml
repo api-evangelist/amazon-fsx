@@ -25,12 +25,6 @@ servers:
 tags:
   - name: File Systems
     description: Operations for creating and managing file systems
-  - name: Backups
-    description: Operations for creating and managing backups
-  - name: Snapshots
-    description: Operations for creating and managing snapshots
-  - name: Volumes
-    description: Operations for creating and managing volumes
 paths:
   /:
     post:
