@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-fsx/refs/heads/main/json-structure/amazon-fsx-backup-structure.json",
+  "name": "Backup",
+  "description": "An automatic or user-initiated backup of an Amazon FSx file system.",
+  "type": "object",
+  "fields": [
+    {
+      "name": "BackupId",
+      "type": "string",
+      "description": "Unique ID of the backup.",
+      "required": true
+    },
+    {
+      "name": "Lifecycle",
+      "type": "string",
+      "description": "Current lifecycle state.",
+      "enum": [
+        "AVAILABLE",
+        "CREATING",
+        "TRANSFERRING",
+        "DELETED",
+        "FAILED",
+        "PENDING",
+        "COPYING"
+      ]
+    },
+    {
+      "name": "Type",
+      "type": "string",
+      "description": "Type of backup.",
+      "enum": [
+        "AUTOMATIC",
+        "USER_INITIATED",
+        "AWS_BACKUP"
+      ]
+    },
+    {
+      "name": "CreationTime",
+      "type": "datetime",
+      "description": ""
+    },
+    {
+      "name": "FileSystem",
+      "type": "object",
+      "description": "The file system that was backed up."
+    },
+    {
+      "name": "KmsKeyId",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "ResourceARN",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "Tags",
+      "type": "array",
+      "description": ""
+    },
+    {
+      "name": "OwnerId",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "SourceBackupId",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

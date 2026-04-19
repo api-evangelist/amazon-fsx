@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-fsx/refs/heads/main/json-schema/amazon-fsx-file-system-schema.json",
+  "title": "FileSystem",
+  "description": "An Amazon FSx fully managed file system (Lustre, Windows File Server, NetApp ONTAP, or OpenZFS).",
+  "type": "object",
+  "properties": {
+    "FileSystemId": {
+      "type": "string",
+      "description": "Unique identifier for the file system."
+    },
+    "FileSystemType": {
+      "type": "string",
+      "enum": [
+        "WINDOWS",
+        "LUSTRE",
+        "ONTAP",
+        "OPENZFS"
+      ],
+      "description": "Type of the file system."
+    },
+    "Lifecycle": {
+      "type": "string",
+      "enum": [
+        "AVAILABLE",
+        "CREATING",
+        "FAILED",
+        "DELETING",
+        "MISCONFIGURED",
+        "UPDATING",
+        "MISCONFIGURED_UNAVAILABLE"
+      ],
+      "description": "Current lifecycle state."
+    },
+    "StorageCapacity": {
+      "type": "integer",
+      "description": "Storage capacity in GiB."
+    },
+    "StorageType": {
+      "type": "string",
+      "enum": [
+        "SSD",
+        "HDD"
+      ],
+      "description": "Type of storage media."
+    },
+    "VpcId": {
+      "type": "string",
+      "description": "ID of the VPC containing the file system."
+    },
+    "SubnetIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of the subnets."
+    },
+    "DNSName": {
+      "type": "string",
+      "description": "DNS name for the file system."
+    },
+    "KmsKeyId": {
+      "type": "string",
+      "description": "ID of the KMS key for encryption."
+    },
+    "ResourceARN": {
+      "type": "string",
+      "description": "ARN of the file system."
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tag"
+      }
+    },
+    "CreationTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "OwnerId": {
+      "type": "string",
+      "description": "AWS account ID of the file system owner."
+    }
+  },
+  "required": [
+    "FileSystemType",
+    "StorageCapacity",
+    "SubnetIds"
+  ]
+}

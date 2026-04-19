@@ -1,0 +1,99 @@
+vocabulary:
+  id: amazon-fsx-vocabulary
+  name: Amazon FSx Vocabulary
+  description: Controlled vocabulary for Amazon FSx managed file systems across Lustre, Windows File Server, NetApp ONTAP, and OpenZFS types.
+  version: 1.0.0
+  provider: Amazon Web Services
+  resources:
+  - name: FileSystem
+    description: A fully managed file system deployed in a VPC with a specific type (Lustre, WINDOWS, ONTAP, OPENZFS).
+    operations:
+    - createFileSystem
+    - describeFileSystems
+    - updateFileSystem
+    - deleteFileSystem
+    - restoreFileSystemFromBackup
+  - name: Backup
+    description: A point-in-time copy of a file system used for disaster recovery and data retention.
+    operations:
+    - createBackup
+    - describeBackups
+    - copyBackup
+    - deleteBackup
+    - restoreVolumeFromBackup
+  - name: Snapshot
+    description: A read-only, point-in-time copy of an OpenZFS volume.
+    operations:
+    - createSnapshot
+    - describeSnapshots
+    - updateSnapshot
+    - deleteSnapshot
+    - copySnapshotAndUpdateVolume
+  - name: StorageVirtualMachine
+    description: An isolated NAS virtual appliance within an FSx for NetApp ONTAP file system.
+    operations:
+    - createStorageVirtualMachine
+    - describeStorageVirtualMachines
+    - updateStorageVirtualMachine
+    - deleteStorageVirtualMachine
+  - name: Volume
+    description: A storage container within an FSx for NetApp ONTAP or OpenZFS file system.
+    operations:
+    - createVolume
+    - describeVolumes
+    - updateVolume
+    - deleteVolume
+  - name: DataRepositoryAssociation
+    description: A link between an FSx for Lustre file system and an Amazon S3 data repository.
+    operations:
+    - createDataRepositoryAssociation
+    - describeDataRepositoryAssociations
+    - updateDataRepositoryAssociation
+    - deleteDataRepositoryAssociation
+  - name: Tag
+    description: A key-value metadata label applied to FSx resources.
+    operations:
+    - listTagsForResource
+    - tagResource
+    - untagResource
+  actions:
+  - name: create
+    description: Provision a new resource.
+  - name: describe
+    description: Retrieve details of one or more resources.
+  - name: update
+    description: Modify a resource.
+  - name: delete
+    description: Remove and deprovision a resource.
+  - name: restore
+    description: Recreate a resource from a backup or snapshot.
+  - name: copy
+    description: Duplicate a backup or snapshot to another region.
+  - name: tag
+    description: Attach metadata to a resource.
+  concepts:
+  - term: Lustre
+    definition: A high-performance parallel file system optimized for HPC, ML training, and media workflows with S3 data repository integration.
+  - term: ONTAP
+    definition: NetApp's enterprise NAS operating system providing multi-protocol file access (NFS, SMB, iSCSI) with SnapMirror and FlexClone.
+  - term: OpenZFS
+    definition: The OpenZFS file system ported to AWS FSx, providing high-IOPS NFS storage with snapshots and cloning.
+  - term: Windows File Server
+    definition: A managed Windows-native SMB file system built on Windows Server, integrated with Active Directory.
+  - term: Storage Virtual Machine (SVM)
+    definition: An isolated virtual server within FSx for ONTAP providing dedicated NAS access and ONTAP features.
+  - term: Data Repository Association
+    definition: A link between FSx for Lustre and Amazon S3 enabling data import, export, and auto-import of new S3 objects.
+  - term: HSM (Hierarchical Storage Management)
+    definition: FSx for Lustre's tiering feature that keeps recently accessed data hot locally while older data is stored in S3.
+  - term: DFS Namespace
+    definition: Distributed File System namespace support in FSx for Windows File Server for transparent multi-share access.
+  tags:
+  - Storage
+  - File Systems
+  - High Performance Computing
+  - NetApp ONTAP
+  - Lustre
+  - Windows File Server
+  - OpenZFS
+  - AWS

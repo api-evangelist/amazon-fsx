@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-fsx/refs/heads/main/json-structure/amazon-fsx-file-system-structure.json",
+  "name": "FileSystem",
+  "description": "An Amazon FSx fully managed file system (Lustre, Windows File Server, NetApp ONTAP, or OpenZFS).",
+  "type": "object",
+  "fields": [
+    {
+      "name": "FileSystemId",
+      "type": "string",
+      "description": "Unique identifier for the file system."
+    },
+    {
+      "name": "FileSystemType",
+      "type": "string",
+      "description": "Type of the file system.",
+      "required": true,
+      "enum": [
+        "WINDOWS",
+        "LUSTRE",
+        "ONTAP",
+        "OPENZFS"
+      ]
+    },
+    {
+      "name": "Lifecycle",
+      "type": "string",
+      "description": "Current lifecycle state.",
+      "enum": [
+        "AVAILABLE",
+        "CREATING",
+        "FAILED",
+        "DELETING",
+        "MISCONFIGURED",
+        "UPDATING",
+        "MISCONFIGURED_UNAVAILABLE"
+      ]
+    },
+    {
+      "name": "StorageCapacity",
+      "type": "int32",
+      "description": "Storage capacity in GiB.",
+      "required": true
+    },
+    {
+      "name": "StorageType",
+      "type": "string",
+      "description": "Type of storage media.",
+      "enum": [
+        "SSD",
+        "HDD"
+      ]
+    },
+    {
+      "name": "VpcId",
+      "type": "string",
+      "description": "ID of the VPC containing the file system."
+    },
+    {
+      "name": "SubnetIds",
+      "type": "array",
+      "description": "IDs of the subnets.",
+      "required": true
+    },
+    {
+      "name": "DNSName",
+      "type": "string",
+      "description": "DNS name for the file system."
+    },
+    {
+      "name": "KmsKeyId",
+      "type": "string",
+      "description": "ID of the KMS key for encryption."
+    },
+    {
+      "name": "ResourceARN",
+      "type": "string",
+      "description": "ARN of the file system."
+    },
+    {
+      "name": "Tags",
+      "type": "array",
+      "description": ""
+    },
+    {
+      "name": "CreationTime",
+      "type": "datetime",
+      "description": ""
+    },
+    {
+      "name": "OwnerId",
+      "type": "string",
+      "description": "AWS account ID of the file system owner."
+    }
+  ]
+}

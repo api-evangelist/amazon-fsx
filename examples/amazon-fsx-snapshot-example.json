@@ -1,0 +1,14 @@
+{
+  "SnapshotId": "fsvolsnap-abc12345678901234",
+  "Name": "daily-snapshot-2025-06-01",
+  "VolumeId": "fsvol-abc1234567890def0",
+  "CreationTime": "2025-06-01T00:00:00Z",
+  "Lifecycle": "AVAILABLE",
+  "ResourceARN": "arn:aws:fsx:us-east-1:123456789012:snapshot/fsvolsnap-abc12345678901234",
+  "Tags": [
+    {
+      "Key": "Schedule",
+      "Value": "Daily"
+    }
+  ]
+}

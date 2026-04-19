@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-fsx/refs/heads/main/json-schema/amazon-fsx-tag-schema.json",
+  "title": "Tag",
+  "description": "A key-value metadata label applied to an Amazon FSx resource.",
+  "type": "object",
+  "properties": {
+    "Key": {
+      "type": "string",
+      "description": "Tag key."
+    },
+    "Value": {
+      "type": "string",
+      "description": "Tag value."
+    }
+  },
+  "required": [
+    "Key",
+    "Value"
+  ]
+}

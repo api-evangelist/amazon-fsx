@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-fsx/refs/heads/main/json-structure/amazon-fsx-snapshot-structure.json",
+  "name": "Snapshot",
+  "description": "A point-in-time snapshot of an Amazon FSx for OpenZFS volume.",
+  "type": "object",
+  "fields": [
+    {
+      "name": "SnapshotId",
+      "type": "string",
+      "description": "Unique ID of the snapshot."
+    },
+    {
+      "name": "Name",
+      "type": "string",
+      "description": "Name of the snapshot.",
+      "required": true
+    },
+    {
+      "name": "VolumeId",
+      "type": "string",
+      "description": "ID of the volume this snapshot was taken from.",
+      "required": true
+    },
+    {
+      "name": "CreationTime",
+      "type": "datetime",
+      "description": ""
+    },
+    {
+      "name": "Lifecycle",
+      "type": "string",
+      "description": "",
+      "enum": [
+        "PENDING",
+        "CREATING",
+        "DELETING",
+        "AVAILABLE"
+      ]
+    },
+    {
+      "name": "ResourceARN",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "Tags",
+      "type": "array",
+      "description": ""
+    },
+    {
+      "name": "AdministrativeActions",
+      "type": "array",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "StorageVirtualMachineId": "svm-abc1234567890def0",
+  "Name": "svm-production",
+  "FileSystemId": "fs-abc1234567890def0",
+  "Lifecycle": "CREATED",
+  "ResourceARN": "arn:aws:fsx:us-east-1:123456789012:storage-virtual-machine/fs-abc1234567890def0/svm-abc1234567890def0",
+  "Subtype": "DEFAULT",
+  "UUID": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "CreationTime": "2025-01-15T09:00:00Z",
+  "Endpoints": {
+    "Iscsi": {
+      "DNSName": "iscsi.svm-abc1234567890def0.fs-abc1234567890def0.fsx.us-east-1.amazonaws.com"
+    },
+    "Nfs": {
+      "DNSName": "nfs.svm-abc1234567890def0.fs-abc1234567890def0.fsx.us-east-1.amazonaws.com"
+    },
+    "Smb": {
+      "DNSName": "smb.svm-abc1234567890def0.fs-abc1234567890def0.fsx.us-east-1.amazonaws.com"
+    }
+  }
+}

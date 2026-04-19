@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-fsx/refs/heads/main/json-schema/amazon-fsx-storage-virtual-machine-schema.json",
+  "title": "StorageVirtualMachine",
+  "description": "A storage virtual machine (SVM) in an Amazon FSx for NetApp ONTAP file system.",
+  "type": "object",
+  "properties": {
+    "ActiveDirectoryConfiguration": {
+      "type": "object",
+      "description": "Active Directory configuration for the SVM."
+    },
+    "CreationTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "Endpoints": {
+      "type": "object",
+      "description": "Endpoints for accessing the SVM via different protocols."
+    },
+    "FileSystemId": {
+      "type": "string"
+    },
+    "Lifecycle": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "CREATING",
+        "DELETING",
+        "FAILED",
+        "MISCONFIGURED",
+        "PENDING"
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "description": "Name of the SVM."
+    },
+    "ResourceARN": {
+      "type": "string"
+    },
+    "StorageVirtualMachineId": {
+      "type": "string"
+    },
+    "Subtype": {
+      "type": "string",
+      "enum": [
+        "DEFAULT",
+        "DP_DESTINATION",
+        "SYNC_DESTINATION",
+        "SYNC_SOURCE"
+      ]
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "UUID": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Name",
+    "FileSystemId"
+  ]
+}

@@ -1,0 +1,193 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon FSx File System Management
+  description: Manage fully managed Amazon FSx file systems including Lustre, Windows File Server, NetApp ONTAP, and OpenZFS.
+  tags:
+  - Storage
+  - File Systems
+  - High Performance Computing
+  - NetApp ONTAP
+  - Lustre
+  - AWS
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - namespace: fsx
+    ref: capabilities/shared/fsx.yaml
+  exposes:
+  - type: rest
+    port: 8080
+  - type: mcp
+    port: 9090
+  tools:
+  - name: createFileSystem
+    description: Create an Amazon FSx file system
+    inputSchema:
+      type: object
+      properties:
+        FileSystemType:
+          type: string
+        StorageCapacity:
+          type: integer
+        SubnetIds:
+          type: array
+        StorageType:
+          type: string
+        KmsKeyId:
+          type: string
+        Tags:
+          type: array
+      required:
+      - FileSystemType
+      - StorageCapacity
+      - SubnetIds
+  - name: describeFileSystems
+    description: Describe file systems
+    inputSchema:
+      type: object
+      properties:
+        FileSystemIds:
+          type: array
+        MaxResults:
+          type: integer
+        NextToken:
+          type: string
+  - name: updateFileSystem
+    description: Update a file system configuration
+    inputSchema:
+      type: object
+      properties:
+        FileSystemId:
+          type: string
+        StorageCapacity:
+          type: integer
+      required:
+      - FileSystemId
+  - name: deleteFileSystem
+    description: Delete an Amazon FSx file system
+    inputSchema:
+      type: object
+      properties:
+        FileSystemId:
+          type: string
+        FinalBackup:
+          type: object
+      required:
+      - FileSystemId
+  - name: createBackup
+    description: Create a backup of an Amazon FSx file system
+    inputSchema:
+      type: object
+      properties:
+        FileSystemId:
+          type: string
+        Tags:
+          type: array
+      required:
+      - FileSystemId
+  - name: describeBackups
+    description: Describe backups
+    inputSchema:
+      type: object
+      properties:
+        BackupIds:
+          type: array
+        MaxResults:
+          type: integer
+        NextToken:
+          type: string
+  - name: deleteBackup
+    description: Delete a backup
+    inputSchema:
+      type: object
+      properties:
+        BackupId:
+          type: string
+      required:
+      - BackupId
+  - name: createSnapshot
+    description: Create a snapshot of an OpenZFS volume
+    inputSchema:
+      type: object
+      properties:
+        Name:
+          type: string
+        VolumeId:
+          type: string
+        Tags:
+          type: array
+      required:
+      - Name
+      - VolumeId
+  - name: describeSnapshots
+    description: Describe snapshots
+    inputSchema:
+      type: object
+      properties:
+        SnapshotIds:
+          type: array
+        MaxResults:
+          type: integer
+        NextToken:
+          type: string
+  - name: createStorageVirtualMachine
+    description: Create a storage virtual machine in an ONTAP file system
+    inputSchema:
+      type: object
+      properties:
+        FileSystemId:
+          type: string
+        Name:
+          type: string
+        RootVolumeSecurityStyle:
+          type: string
+      required:
+      - FileSystemId
+      - Name
+  - name: describeStorageVirtualMachines
+    description: Describe storage virtual machines
+    inputSchema:
+      type: object
+      properties:
+        StorageVirtualMachineIds:
+          type: array
+        MaxResults:
+          type: integer
+  - name: listTagsForResource
+    description: List tags for an FSx resource
+    inputSchema:
+      type: object
+      properties:
+        ResourceARN:
+          type: string
+      required:
+      - ResourceARN
+  - name: tagResource
+    description: Tag an FSx resource
+    inputSchema:
+      type: object
+      properties:
+        ResourceARN:
+          type: string
+        Tags:
+          type: array
+      required:
+      - ResourceARN
+      - Tags
+  - name: restoreVolumeFromSnapshot
+    description: Restore an OpenZFS volume from a snapshot
+    inputSchema:
+      type: object
+      properties:
+        VolumeId:
+          type: string
+        SnapshotId:
+          type: string
+      required:
+      - VolumeId
+      - SnapshotId

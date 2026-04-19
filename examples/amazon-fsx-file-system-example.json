@@ -1,0 +1,25 @@
+{
+  "FileSystemId": "fs-abc1234567890def0",
+  "FileSystemType": "LUSTRE",
+  "Lifecycle": "AVAILABLE",
+  "StorageCapacity": 1200,
+  "StorageType": "SSD",
+  "VpcId": "vpc-abc12345",
+  "SubnetIds": [
+    "subnet-abc12345"
+  ],
+  "DNSName": "fs-abc1234567890def0.fsx.us-east-1.amazonaws.com",
+  "ResourceARN": "arn:aws:fsx:us-east-1:123456789012:file-system/fs-abc1234567890def0",
+  "Tags": [
+    {
+      "Key": "Name",
+      "Value": "HPC-Scratch"
+    },
+    {
+      "Key": "Environment",
+      "Value": "Production"
+    }
+  ],
+  "CreationTime": "2025-01-15T09:00:00Z",
+  "OwnerId": "123456789012"
+}
