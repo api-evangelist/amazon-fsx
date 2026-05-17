@@ -112,7 +112,7 @@ common:
   url: capabilities/amazon-fsx-file-system-management.yaml
 - type: Vocabulary
   url: vocabulary/amazon-fsx-vocabulary.yaml
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-fsx-context.jsonld
 - type: Features
   data:
