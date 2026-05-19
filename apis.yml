@@ -1,15 +1,12 @@
 name: Amazon FSx
-description: >-
-  Amazon FSx provides fully managed file systems with the native
-  compatibility and feature sets for workloads that require shared file
-  storage. FSx supports four widely-used file systems including NetApp ONTAP,
-  OpenZFS, Windows File Server, and Lustre, delivering high performance and
-  low latency access to data.
+description: Amazon FSx provides fully managed file systems with the native compatibility and feature sets for workloads that
+  require shared file storage. FSx supports four widely-used file systems including NetApp ONTAP, OpenZFS, Windows File Server,
+  and Lustre, delivering high performance and low latency access to data.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/fsx/
 type: Index
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 tags:
 - AWS
 - File Systems
@@ -20,11 +17,9 @@ tags:
 - Windows
 apis:
 - name: Amazon FSx API
-  description: >-
-    The Amazon FSx API enables programmatic access to create, manage, and
-    monitor fully managed file systems. You can create file systems, manage
-    backups, configure data repositories, create snapshots, and manage
-    storage virtual machines across multiple file system types.
+  description: The Amazon FSx API enables programmatic access to create, manage, and monitor fully managed file systems. You
+    can create file systems, manage backups, configure data repositories, create snapshots, and manage storage virtual machines
+    across multiple file system types.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/fsx/
   baseURL: https://fsx.amazonaws.com
@@ -76,6 +71,8 @@ apis:
     url: https://aws.amazon.com/fsx/faqs/
   - type: APIReference
     url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
+  - type: NaftikoCapability
+    url: capabilities/amazon-fsx-file-systems.yaml
   aid: amazon-fsx:amazon-fsx-api
 common:
 - type: Portal
@@ -106,10 +103,6 @@ common:
   url: https://stackoverflow.com/questions/tagged/amazon-fsx
 - type: SpectralRules
   url: rules/amazon-fsx-spectral-rules.yml
-- type: NaftikoCapability
-  url: capabilities/shared/fsx.yaml
-- type: NaftikoCapability
-  url: capabilities/amazon-fsx-file-system-management.yaml
 - type: Vocabulary
   url: vocabulary/amazon-fsx-vocabulary.yaml
 - type: JSONLD
@@ -165,15 +158,15 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/marketplace
 integrations:
-  - name: Sign in
-  - name: Agent Mode
-  - name: 'Why AWS Marketplace?'
-  - name: Get started in AWS Marketplace
-  - name: Industry
-  - name: Resources
-  - name: Become a Channel Partner
-  - name: Sell in AWS Marketplace
-  - name: Manage Your Account
+- name: Sign in
+- name: Agent Mode
+- name: Why AWS Marketplace?
+- name: Get started in AWS Marketplace
+- name: Industry
+- name: Resources
+- name: Become a Channel Partner
+- name: Sell in AWS Marketplace
+- name: Manage Your Account
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

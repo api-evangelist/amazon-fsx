@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon FSx API — File Systems
+  description: 'Amazon FSx API — File Systems. 1 operations. Lead operation: Amazon FSx Create a new file system. Self-contained
+    Naftiko capability covering one Amazon Fsx business surface.'
+  tags:
+  - Amazon Fsx
+  - File Systems
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_FSX_API_KEY: AMAZON_FSX_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-fsx-file-systems
+    baseUri: https://fsx.{region}.amazonaws.com
+    description: Amazon FSx API — File Systems business capability. Self-contained, no shared references.
+    resources:
+    - name: root
+      path: /
+      operations:
+      - name: createfilesystem
+        method: POST
+        description: Amazon FSx Create a new file system
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+  exposes:
+  - type: rest
+    namespace: amazon-fsx-file-systems-rest
+    port: 8080
+    description: REST adapter for Amazon FSx API — File Systems. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1
+      name: root
+      description: REST surface for root.
+      operations:
+      - method: POST
+        name: createfilesystem
+        description: Amazon FSx Create a new file system
+        call: amazon-fsx-file-systems.createfilesystem
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-fsx-file-systems-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon FSx API — File Systems. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: amazon-fsx-create-new-file
+      description: Amazon FSx Create a new file system
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-fsx-file-systems.createfilesystem
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
