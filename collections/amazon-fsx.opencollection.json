@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon FSx API",
+    "version": "2018-03-01"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "File Systems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon FSx Create a new file system",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fsx.{region}.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new Amazon FSx file system of the specified type."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
