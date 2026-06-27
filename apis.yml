@@ -55,15 +55,15 @@ apis:
         url: json-structure/amazon-fsx-storage-virtual-machine-structure.json
       - type: JSONStructure
         url: json-structure/amazon-fsx-tag-structure.json
-      - type: Example
+      - type: Examples
         url: examples/amazon-fsx-file-system-example.json
-      - type: Example
+      - type: Examples
         url: examples/amazon-fsx-backup-example.json
-      - type: Example
+      - type: Examples
         url: examples/amazon-fsx-snapshot-example.json
-      - type: Example
+      - type: Examples
         url: examples/amazon-fsx-storage-virtual-machine-example.json
-      - type: Example
+      - type: Examples
         url: examples/amazon-fsx-tag-example.json
       - type: GettingStarted
         url: https://aws.amazon.com/fsx/getting-started/
@@ -93,7 +93,7 @@ common:
     url: https://github.com/aws
   - type: Console
     url: https://console.aws.amazon.com/fsx/
-  - type: SignUp
+  - type: Signup
     url: https://portal.aws.amazon.com/billing/signup
   - type: StatusPage
     url: https://health.aws.amazon.com/health/status
