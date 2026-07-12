@@ -75,6 +75,12 @@ apis:
         url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
     aid: amazon-fsx:amazon-fsx-api
 common:
+  - type: TrustCenter
+    url: security/amazon-fsx-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-fsx-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-fsx-domain-security.yml
   - type: Portal
     url: https://aws.amazon.com/fsx/
   - type: Website
