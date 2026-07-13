@@ -1,185 +1,196 @@
-# Amazon FSx Spectral Rules
-extends: spectral:oas
+# amazon-fsx — Spectral ruleset (strengthened)
+# Plain Spectral. Existing hand-authored rules preserved; measured rules added
+# from this provider's own OpenAPI conventions by strengthen_ruleset.py,
+# then self-validated against the spec.
+#
+# Provenance:
+#   - servers-https-only: 100% of servers already https (error)
+#   - servers-expected-domain: 1/1 servers on amazonaws.com
+#   - merge: kept 26 existing, added 2 measured, upgraded 0
+#   - added: servers-expected-domain, no-empty-descriptions
+extends:
+  - spectral:oas
 rules:
   fsx-info-contact:
     description: API must include contact information
     severity: warn
-    given: "$.info"
+    given: $.info
     then:
       field: contact
       function: truthy
   fsx-info-description:
     description: API must have a description
     severity: error
-    given: "$.info"
+    given: $.info
     then:
       field: description
       function: truthy
   fsx-server-https:
     description: Server URLs must use HTTPS
     severity: error
-    given: "$.servers[*].url"
+    given: $.servers[*].url
     then:
       function: pattern
       functionOptions:
-        match: "^https://"
+        match: ^https://
   fsx-operation-summary:
     description: Operations must have a summary
     severity: error
-    given: "$.paths[*][get,post,put,patch,delete]"
+    given: $.paths[*][get,post,put,patch,delete]
     then:
       field: summary
       function: truthy
   fsx-operation-description:
     description: Operations should have a description
     severity: warn
-    given: "$.paths[*][get,post,put,patch,delete]"
+    given: $.paths[*][get,post,put,patch,delete]
     then:
       field: description
       function: truthy
   fsx-operation-tags:
     description: Operations must have at least one tag
     severity: error
-    given: "$.paths[*][get,post,put,patch,delete]"
+    given: $.paths[*][get,post,put,patch,delete]
     then:
       field: tags
       function: truthy
   fsx-operation-id:
     description: Operations must have operationId
     severity: error
-    given: "$.paths[*][get,post,put,patch,delete]"
+    given: $.paths[*][get,post,put,patch,delete]
     then:
       field: operationId
       function: truthy
   fsx-operation-id-camel-case:
     description: operationId should use camelCase
     severity: warn
-    given: "$.paths[*][get,post,put,patch,delete].operationId"
+    given: $.paths[*][get,post,put,patch,delete].operationId
     then:
       function: pattern
       functionOptions:
-        match: "^[a-z][a-zA-Z0-9]*$"
+        match: ^[a-z][a-zA-Z0-9]*$
   fsx-response-200:
     description: POST operations should define 200 response
     severity: warn
-    given: "$.paths[*][post]"
+    given: $.paths[*][post]
     then:
       field: responses.200
       function: truthy
   fsx-response-400:
     description: Operations should define 400 response
     severity: warn
-    given: "$.paths[*][get,post,put,patch,delete]"
+    given: $.paths[*][get,post,put,patch,delete]
     then:
       field: responses.400
       function: truthy
   fsx-response-500:
     description: Operations should define 500 response
     severity: warn
-    given: "$.paths[*][get,post,put,patch,delete]"
+    given: $.paths[*][get,post,put,patch,delete]
     then:
       field: responses.500
       function: truthy
   fsx-schema-description:
     description: Schema components should have descriptions
     severity: warn
-    given: "$.components.schemas[*]"
+    given: $.components.schemas[*]
     then:
       field: description
       function: truthy
   fsx-tags-title-case:
     description: Operation tags should use Title Case
     severity: warn
-    given: "$.paths[*][*].tags[*]"
+    given: $.paths[*][*].tags[*]
     then:
       function: pattern
       functionOptions:
-        match: "^[A-Z][a-zA-Z0-9 ]*$"
+        match: ^[A-Z][a-zA-Z0-9 ]*$
   fsx-filesystem-type-documented:
     description: FileSystem schema should define FileSystemType field
     severity: warn
-    given: "$.components.schemas.FileSystem.properties"
+    given: $.components.schemas.FileSystem.properties
     then:
       field: FileSystemType
       function: truthy
   fsx-lifecycle-enum:
     description: FileSystem lifecycle should define enum values
     severity: info
-    given: "$.components.schemas.FileSystem.properties.Lifecycle"
+    given: $.components.schemas.FileSystem.properties.Lifecycle
     then:
       field: enum
       function: truthy
   fsx-backup-type-enum:
     description: Backup type should define enum values
     severity: info
-    given: "$.components.schemas.Backup.properties.Type"
+    given: $.components.schemas.Backup.properties.Type
     then:
       field: enum
       function: truthy
   fsx-parameter-description:
     description: Parameters must have descriptions
     severity: error
-    given: "$.paths[*][get,post,put,patch,delete].parameters[*]"
+    given: $.paths[*][get,post,put,patch,delete].parameters[*]
     then:
       field: description
       function: truthy
   fsx-path-param-required:
     description: Path parameters must be required
     severity: error
-    given: "$.paths[*][get,post,put,patch,delete].parameters[?(@.in=='path')]"
+    given: $.paths[*][get,post,put,patch,delete].parameters[?(@.in=='path')]
     then:
       field: required
       function: truthy
   fsx-schema-properties:
     description: Object schemas should define properties
     severity: warn
-    given: "$.components.schemas[?(@.type=='object')]"
+    given: $.components.schemas[?(@.type=='object')]
     then:
       field: properties
       function: truthy
   fsx-request-body-json:
     description: POST request bodies should define application/json content
     severity: warn
-    given: "$.paths[*].post.requestBody.content"
+    given: $.paths[*].post.requestBody.content
     then:
       function: schema
       functionOptions:
         schema:
           type: object
-          required: ["application/json"]
+          required:
+          - application/json
   fsx-create-prefix:
     description: POST creation operationIds should start with 'create'
     severity: warn
-    given: "$.paths[*].post.operationId"
+    given: $.paths[*].post.operationId
     then:
       function: pattern
       functionOptions:
-        match: "^(create|describe|list|tag|associate)"
+        match: ^(create|describe|list|tag|associate)
   fsx-delete-operation:
     description: DELETE operations should have a description
     severity: warn
-    given: "$.paths[*].delete"
+    given: $.paths[*].delete
     then:
       field: description
       function: truthy
   fsx-storage-capacity-documented:
     description: FileSystem schema should document StorageCapacity
     severity: warn
-    given: "$.components.schemas.FileSystem.properties"
+    given: $.components.schemas.FileSystem.properties
     then:
       field: StorageCapacity
       function: truthy
   fsx-resource-arn-consistent:
     description: Resource ARN field should be named ResourceARN
     severity: info
-    given: "$.components.schemas[*].properties.ResourceARN"
+    given: $.components.schemas[*].properties.ResourceARN
     then:
       field: type
       function: truthy
   fsx-tag-schema-required:
     description: Tag schema must require Key field
     severity: warn
-    given: "$.components.schemas.Tag.required"
+    given: $.components.schemas.Tag.required
     then:
       function: schema
       functionOptions:
@@ -190,7 +201,7 @@ rules:
   fsx-svm-filesystem-required:
     description: StorageVirtualMachine must reference FileSystemId
     severity: warn
-    given: "$.components.schemas.StorageVirtualMachine.required"
+    given: $.components.schemas.StorageVirtualMachine.required
     then:
       function: schema
       functionOptions:
@@ -198,3 +209,17 @@ rules:
           type: array
           contains:
             const: FileSystemId
+  servers-expected-domain:
+    description: Server URLs should be on the amazonaws.com domain.
+    severity: warn
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: amazonaws\.com
+  no-empty-descriptions:
+    description: Descriptions must not be empty strings.
+    severity: warn
+    given: $..description
+    then:
+      function: truthy
