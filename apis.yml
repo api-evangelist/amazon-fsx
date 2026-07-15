@@ -75,6 +75,8 @@ apis:
         url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
     aid: amazon-fsx:amazon-fsx-api
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-fsx-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-fsx-trust-center.yml
   - type: VulnerabilityDisclosure
