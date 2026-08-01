@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "92b6ac22-8748-4230-b22a-41a94acc3032",
+    "name": "Amazon FSx File Systems API",
+    "description": "Amazon FSx provides fully managed file systems optimized for a variety of workloads. This API enables you to create and manage file systems, configure backups and snapshots, manage data repositories, and monitor file system health across Lustre, Windows File Server, NetApp ONTAP, and OpenZFS file system types.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:38:20.000Z",
+    "updatedAt": "2026-07-28T00:38:21.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-92b6ac22-8748-4230-b22a-41a94acc3032"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Amazon FSx Create a new file system",
+          "id": "89e898d8-440a-441d-b9e3-29acb3e52df9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"FileSystemType\": \"LUSTRE\",\n  \"StorageCapacity\": \"<integer>\",\n  \"SubnetIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"SecurityGroupIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            },
+            "description": "Creates a new Amazon FSx file system of the specified type."
+          },
+          "response": [
+            {
+              "id": "4d99b399-0abc-4f67-a1be-d01c3c988d79",
+              "name": "File system created successfully",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileSystemType\": \"LUSTRE\",\n  \"StorageCapacity\": \"<integer>\",\n  \"SubnetIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"SecurityGroupIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"FileSystem\": {}\n}",
+              "createdAt": "2026-07-28T00:38:21.000Z",
+              "updatedAt": "2026-07-28T00:38:21.000Z",
+              "uid": "35240-4d99b399-0abc-4f67-a1be-d01c3c988d79"
+            }
+          ],
+          "createdAt": "2026-07-28T00:38:21.000Z",
+          "updatedAt": "2026-07-28T00:38:21.000Z",
+          "uid": "35240-89e898d8-440a-441d-b9e3-29acb3e52df9"
+        }
+      ],
+      "id": "7943850f-ce21-49cc-9e38-273d30bfeaf8",
+      "createdAt": "2026-07-28T00:38:21.000Z",
+      "updatedAt": "2026-07-28T00:38:21.000Z",
+      "uid": "35240-7943850f-ce21-49cc-9e38-273d30bfeaf8"
+    }
+  ],
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://fsx.{{region}}.amazonaws.com"
+    }
+  ]
+}

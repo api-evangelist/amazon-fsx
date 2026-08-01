@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-fsx",
+  "sources": [
+    "amazon-fsx-file-systems-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-fsx-file-systems-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
