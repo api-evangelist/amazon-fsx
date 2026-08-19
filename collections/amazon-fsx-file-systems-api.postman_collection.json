@@ -1,0 +1,146 @@
+{
+  "item": [
+    {
+      "id": "0acf30d5-c8e0-49bd-b788-c45623133dde",
+      "name": "File Systems",
+      "description": {
+        "content": "Operations for creating and managing file systems",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "028f6fb4-de53-4f66-89a3-3a7b076b93ee",
+          "name": "Amazon FSx Create a new file system",
+          "request": {
+            "name": "Amazon FSx Create a new file system",
+            "description": {
+              "content": "Creates a new Amazon FSx file system of the specified type.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS Region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"FileSystemType\": \"<string>\",\n  \"StorageCapacity\": \"<integer>\",\n  \"SubnetIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"SecurityGroupIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Tags\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e0c4d56a-91ee-4c10-8eed-f16e1c9ace33",
+              "name": "File system created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS Region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"FileSystemType\": \"<string>\",\n  \"StorageCapacity\": \"<integer>\",\n  \"SubnetIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"SecurityGroupIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Tags\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FileSystem\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS Region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://fsx.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "91084c37-7ff3-4264-b069-c4aca0e6c8c2",
+    "name": "Amazon FSx File Systems API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon FSx provides fully managed file systems optimized for a variety of workloads. This API enables you to create and manage file systems, configure backups and snapshots, manage data repositories, and monitor file system health across Lustre, Windows File Server, NetApp ONTAP, and OpenZFS file system types.\n\nContact Support:\n Name: Amazon Web Services",
+      "type": "text/plain"
+    }
+  }
+}
