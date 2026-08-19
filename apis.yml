@@ -187,4 +187,4 @@ maintainers:
     email: kin@apievangelist.com
     url: https://apievangelist.com
 aid: amazon-fsx
-specificationVersion: '0.19'
+specificationVersion: '0.23'
