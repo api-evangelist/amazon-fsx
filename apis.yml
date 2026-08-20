@@ -22,6 +22,14 @@ created: '2024-01-15'
 modified: '2026-05-19'
 tags:
   - AWS
+  - Filesystem
+  - Lustre
+  - NetApp
+  - OpenZFS
+  - Storage
+  - Windows
+tags_raw:
+  - AWS
   - File Systems
   - Lustre
   - NetApp
@@ -35,6 +43,8 @@ apis:
   humanURL: https://aws.amazon.com/fsx/
   baseURL: https://fsx.amazonaws.com
   tags:
+  - Filesystem
+  tags_raw:
   - File Systems
   properties:
   - type: OpenAPI
