@@ -3,6 +3,18 @@ description: >-
   Amazon FSx provides fully managed file systems with the native compatibility and feature sets for workloads that
   require shared file storage. FSx supports four widely-used file systems including NetApp ONTAP, OpenZFS, Windows File
   Server, and Lustre, delivering high performance and low latency access to data.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
