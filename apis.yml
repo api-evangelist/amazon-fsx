@@ -49,18 +49,16 @@ tags_raw:
   - Storage
   - Windows
 apis:
-- aid: amazon-fsx:amazon-fsx-file-systems-api
-  name: Amazon FSx File Systems API
+- aid: amazon-fsx:amazon-fsx-filesystems-api
+  name: Amazon FSx Filesystems API
   description: Operations for creating and managing file systems
   humanURL: https://aws.amazon.com/fsx/
   baseURL: https://fsx.amazonaws.com
   tags:
-  - Filesystem
-  tags_raw:
-  - File Systems
+  - Filesystems
   properties:
   - type: OpenAPI
-    url: openapi/amazon-fsx-file-systems-api-openapi.yml
+    url: openapi/amazon-fsx-filesystems-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
   - type: JSONSchema
