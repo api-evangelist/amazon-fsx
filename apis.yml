@@ -55,6 +55,8 @@ apis:
   humanURL: https://aws.amazon.com/fsx/
   baseURL: https://fsx.amazonaws.com
   tags:
+  - Filesystem
+  tags_raw:
   - Filesystems
   properties:
   - type: OpenAPI
