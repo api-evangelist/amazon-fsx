@@ -1,16 +1,23 @@
 {
   "provider": "amazon-fsx",
   "sources": [
-    "amazon-fsx-file-systems-api-openapi.yml"
+    "_original/amazon-fsx-openapi.yml"
   ],
   "outputs": [
     "amazon-fsx-file-systems-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-fsx-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: amazon-fsx-filesystems-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 1 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-fsx-filesystems-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

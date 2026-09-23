@@ -15,7 +15,7 @@ servers:
       default: us-east-1
       description: AWS Region
 tags:
-- name: File Systems
+- name: Filesystems
   description: Operations for creating and managing file systems
 paths:
   /:
@@ -24,7 +24,7 @@ paths:
       summary: Amazon FSx Create a new file system
       description: Creates a new Amazon FSx file system of the specified type.
       tags:
-      - File Systems
+      - Filesystems
       requestBody:
         required: true
         content:
