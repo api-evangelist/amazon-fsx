@@ -55,6 +55,8 @@ apis:
   humanURL: https://aws.amazon.com/fsx/
   baseURL: https://fsx.amazonaws.com
   tags:
+  - Filesystem
+  tags_raw:
   - Filesystems
   properties:
   - type: OpenAPI
@@ -100,6 +102,9 @@ apis:
   - type: APIReference
     url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-fsx-capability-edges.yml
+    name: Amazon FSx Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-fsx/overview
   - type: AgenticAccess
