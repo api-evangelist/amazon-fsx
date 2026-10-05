@@ -1,0 +1,25 @@
+slug: amazon-fsx
+provider: Amazon FSx
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Filesystems
+  spec_file: amazon-fsx-filesystems-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: '"CreateFileSystem  Amazon FSx Create a new file system"; "fully managed file systems ...
+    for workloads that require shared file storage"'
+  reason: Provisioning managed cloud file storage is infrastructure management (compute, storage, network,
+    cloud infrastructure).
