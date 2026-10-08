@@ -100,6 +100,12 @@ apis:
   - type: APIReference
     url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
 common:
+  - type: Plans
+    url: plans/amazon-fsx-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/amazon-fsx-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-fsx-finops.yml
   - type: CapabilityMap
     url: capabilities/amazon-fsx-capability-edges.yml
     name: Amazon FSx Business Capability Map
