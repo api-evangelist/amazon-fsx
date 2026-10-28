@@ -1,4 +1,4 @@
-# Amazon FSx (amazon-fsx)
+# Amazon FSx
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,94 +66,183 @@
 
 Amazon FSx provides fully managed file systems with the native compatibility and feature sets for workloads that require shared file storage. FSx supports four widely-used file systems including NetApp ONTAP, OpenZFS, Windows File Server, and Lustre, delivering high performance and low latency access to data.
 
-**APIs.json:** [https://aws.amazon.com/fsx/](https://aws.amazon.com/fsx/)
+**Areas:** AWS · Filesystem · Lustre · NetApp · OpenZFS · Storage · Windows
 
-## Scope
+## Amazon FSx on APIs.io
 
-- **Type:** Index
+Everything profiled for Amazon FSx is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-fsx/](https://apis.io/providers/amazon-fsx/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (10)
 
-- AWS
-- File Systems
-- Lustre
-- NetApp
-- OpenZFS
-- Storage
-- Windows
+- [Amazon FSx Filesystems API](https://apis.io/apis/amazon-fsx/amazon-fsx-filesystems-api/) — Operations for creating and managing file systems
+- [Amazon FSx Fsx Backup API](https://apis.io/apis/amazon-fsx/amazon-fsx-backup-api/) — The Fsx Backup API from Amazon FSx — 3 operation(s) for fsx backup.
+- [Amazon FSx Fsx Data Repository Association API](https://apis.io/apis/amazon-fsx/amazon-fsx-data-repository-association-api/) — The Fsx Data Repository Association API from Amazon FSx — 4 operation(s) for fsx data repository association.
+- [Amazon FSx Fsx Data Repository Task API](https://apis.io/apis/amazon-fsx/amazon-fsx-data-repository-task-api/) — The Fsx Data Repository Task API from Amazon FSx — 3 operation(s) for fsx data repository task.
+- [Amazon FSx Fsx File Cache API](https://apis.io/apis/amazon-fsx/amazon-fsx-file-cache-api/) — The Fsx File Cache API from Amazon FSx — 4 operation(s) for fsx file cache.
+- [Amazon FSx Fsx File System Aliase API](https://apis.io/apis/amazon-fsx/amazon-fsx-file-system-aliase-api/) — The Fsx File System Aliase API from Amazon FSx — 3 operation(s) for fsx file system aliase.
+- [Amazon FSx Fsx Operations API](https://apis.io/apis/amazon-fsx/amazon-fsx-operations-api/) — The Fsx Operations API from Amazon FSx — 12 operation(s) for fsx operations.
+- [Amazon FSx Fsx Snapshot API](https://apis.io/apis/amazon-fsx/amazon-fsx-snapshot-api/) — The Fsx Snapshot API from Amazon FSx — 4 operation(s) for fsx snapshot.
+- [Amazon FSx Fsx Storage Virtual Machine API](https://apis.io/apis/amazon-fsx/amazon-fsx-storage-virtual-machine-api/) — The Fsx Storage Virtual Machine API from Amazon FSx — 4 operation(s) for fsx storage virtual machine.
+- [Amazon FSx Fsx Volume API](https://apis.io/apis/amazon-fsx/amazon-fsx-volume-api/) — The Fsx Volume API from Amazon FSx — 6 operation(s) for fsx volume.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Amazon FSx API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Amazon FSx API enables programmatic access to create, manage, and monitor fully managed file systems. You can create file systems, manage backups, configure data repositories, create snapshots, and manage storage virtual machines across multiple file system types.
+- [Amazon Fsx Agentic Access](https://apis.io/agentic-access/amazon-fsx/amazon-fsx-agentic-access/)
 
-- **Human URL:** [https://aws.amazon.com/fsx/](https://aws.amazon.com/fsx/)
-- **Base URL:** `https://fsx.amazonaws.com`
+#### JSON Schema (6)
 
-#### Tags
+The data models the API reads and writes.
 
-- File Systems
-- High Performance
-- Managed Services
-- Storage
+- [Amazon FSx File System](https://apis.io/schemas/amazon-fsx/amazon-fsx/)
+- [Backup](https://apis.io/schemas/amazon-fsx/amazon-fsx-backup/)
+- [FileSystem](https://apis.io/schemas/amazon-fsx/amazon-fsx-file-system/)
+- [Snapshot](https://apis.io/schemas/amazon-fsx/amazon-fsx-snapshot/)
+- [StorageVirtualMachine](https://apis.io/schemas/amazon-fsx/amazon-fsx-storage-virtual-machine/)
+- [Tag](https://apis.io/schemas/amazon-fsx/amazon-fsx-tag/)
 
-#### Properties
+#### JSON Structure (5)
 
-- [Documentation](https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html)
-- [OpenAPI](openapi/amazon-fsx-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/amazon-fsx.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-fsx.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/amazon-fsx-file-system-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-fsx-backup-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-fsx-snapshot-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-fsx-storage-virtual-machine-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-fsx-tag-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/amazon-fsx-file-system-structure.json)
-- [JSON Structure](json-structure/amazon-fsx-backup-structure.json)
-- [JSON Structure](json-structure/amazon-fsx-snapshot-structure.json)
-- [JSON Structure](json-structure/amazon-fsx-storage-virtual-machine-structure.json)
-- [JSON Structure](json-structure/amazon-fsx-tag-structure.json)
-- [Example](examples/amazon-fsx-file-system-example.json)
-- [Example](examples/amazon-fsx-backup-example.json)
-- [Example](examples/amazon-fsx-snapshot-example.json)
-- [Example](examples/amazon-fsx-storage-virtual-machine-example.json)
-- [Example](examples/amazon-fsx-tag-example.json)
-- [Getting Started](https://aws.amazon.com/fsx/getting-started/)
-- [Pricing](https://aws.amazon.com/fsx/pricing/)
-- [F A Q](https://aws.amazon.com/fsx/faqs/)
-- [API Reference](https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html)
+Data models expressed in JSON Structure.
 
-## Common Properties
+- [Amazon Fsx Backup Structure](https://apis.io/json-structure/amazon-fsx/amazon-fsx-backup-structure/)
+- [Amazon Fsx File System Structure](https://apis.io/json-structure/amazon-fsx/amazon-fsx-file-system-structure/)
+- [Amazon Fsx Snapshot Structure](https://apis.io/json-structure/amazon-fsx/amazon-fsx-snapshot-structure/)
+- [Amazon Fsx Storage Virtual Machine Structure](https://apis.io/json-structure/amazon-fsx/amazon-fsx-storage-virtual-machine-structure/)
+- [Amazon Fsx Tag Structure](https://apis.io/json-structure/amazon-fsx/amazon-fsx-tag-structure/)
 
-- [Portal](https://aws.amazon.com/fsx/)
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Fsx Context](https://apis.io/jsonld/amazon-fsx/amazon-fsx-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon FSx Vocabulary](https://apis.io/vocabularies/amazon-fsx/amazon-fsx-vocabulary/)
+
+#### Examples (5)
+
+Example requests and responses.
+
+- [Amazon Fsx Backup Example](https://apis.io/examples/amazon-fsx/amazon-fsx-backup-example/)
+- [Amazon Fsx File System Example](https://apis.io/examples/amazon-fsx/amazon-fsx-file-system-example/)
+- [Amazon Fsx Snapshot Example](https://apis.io/examples/amazon-fsx/amazon-fsx-snapshot-example/)
+- [Amazon Fsx Storage Virtual Machine Example](https://apis.io/examples/amazon-fsx/amazon-fsx-storage-virtual-machine-example/)
+- [Amazon Fsx Tag Example](https://apis.io/examples/amazon-fsx/amazon-fsx-tag-example/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Amazon FSx API](https://apis.io/collections/amazon-fsx/open-amazon-fsx/)
+- [Amazon FSx File Systems API](https://apis.io/collections/amazon-fsx/open-amazon-fsx-file-systems-api/)
+- [Amazon FSx File Systems API](https://apis.io/collections/amazon-fsx/postman-amazon-fsx-file-systems-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon FSx — jsonschema rules](https://apis.io/rules/amazon-fsx/amazon-fsx-jsonschema-spectral-rules/)
+- [Amazon FSx API Rules](https://apis.io/rules/amazon-fsx/amazon-fsx-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Fsx Domain Security](https://apis.io/security/amazon-fsx/amazon-fsx-domain-security/)
+- [Amazon Fsx Trust Center](https://apis.io/security/amazon-fsx/amazon-fsx-trust-center/)
+- [Amazon Fsx Vulnerability Disclosure](https://apis.io/security/amazon-fsx/amazon-fsx-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Fsx Plans Pricing](https://apis.io/plans/amazon-fsx/amazon-fsx-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Fsx Rate Limits](https://apis.io/rate-limits/amazon-fsx/amazon-fsx-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Fsx Finops](https://apis.io/finops/amazon-fsx/amazon-fsx-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/fsx/)
 - [Documentation](https://docs.aws.amazon.com/fsx/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/storage/category/storage/amazon-fsx/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/fsx/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/amazon-fsx)
-- [Spectral Rules](rules/amazon-fsx-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-fsx-vocabulary.yaml)
-- [JSON-LD](json-ld/amazon-fsx-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [Integrations](https://aws.amazon.com/marketplace)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 51.7** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 57.6 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 41.7 |
+| Access clarity | 60.5 |
+
+**Agent readiness 16.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-fsx/](https://apis.io/providers/amazon-fsx/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon FSx: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-fsx/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
