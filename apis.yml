@@ -1,0 +1,317 @@
+name: Amazon FSx
+description: >-
+  Amazon FSx provides fully managed file systems with the native compatibility and feature sets for workloads that
+  require shared file storage. FSx supports four widely-used file systems including NetApp ONTAP, OpenZFS, Windows File
+  Server, and Lustre, delivering high performance and low latency access to data.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+url: https://aws.amazon.com/fsx/
+type: Index
+created: '2024-01-15'
+modified: '2026-05-19'
+tags:
+  - Amazon Web Services
+  - Filesystem
+  - Lustre
+  - NetApp
+  - OpenZFS
+  - Storage
+  - Windows
+tags_raw:
+  - AWS
+  - File Systems
+  - Lustre
+  - NetApp
+  - OpenZFS
+  - Storage
+  - Windows
+apis:
+- aid: amazon-fsx:amazon-fsx-filesystems-api
+  name: Amazon FSx Filesystems API
+  description: Operations for creating and managing file systems
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Filesystem
+  tags_raw:
+  - Filesystems
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-filesystems-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
+  - type: JSONSchema
+    url: json-schema/amazon-fsx-file-system-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-fsx-backup-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-fsx-snapshot-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-fsx-storage-virtual-machine-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-fsx-tag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-fsx-file-system-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-fsx-backup-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-fsx-snapshot-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-fsx-storage-virtual-machine-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-fsx-tag-structure.json
+  - type: Examples
+    url: examples/amazon-fsx-file-system-example.json
+  - type: Examples
+    url: examples/amazon-fsx-backup-example.json
+  - type: Examples
+    url: examples/amazon-fsx-snapshot-example.json
+  - type: Examples
+    url: examples/amazon-fsx-storage-virtual-machine-example.json
+  - type: Examples
+    url: examples/amazon-fsx-tag-example.json
+  - type: GettingStarted
+    url: https://aws.amazon.com/fsx/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/fsx/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/fsx/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/fsx/latest/APIReference/Welcome.html
+- aid: amazon-fsx:amazon-fsx-backup-api
+  name: Amazon FSx Fsx Backup API
+  description: The Fsx Backup API from Amazon FSx — 3 operation(s) for fsx backup.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Backup
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-backup-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-data-repository-association-api
+  name: Amazon FSx Fsx Data Repository Association API
+  description: >-
+    The Fsx Data Repository Association API from Amazon FSx — 4 operation(s) for fsx data repository association.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Data Repository Association
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-data-repository-association-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-data-repository-task-api
+  name: Amazon FSx Fsx Data Repository Task API
+  description: >-
+    The Fsx Data Repository Task API from Amazon FSx — 3 operation(s) for fsx data repository task.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Data Repository Task
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-data-repository-task-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-file-cache-api
+  name: Amazon FSx Fsx File Cache API
+  description: The Fsx File Cache API from Amazon FSx — 4 operation(s) for fsx file cache.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx File Cache
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-file-cache-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-file-system-aliase-api
+  name: Amazon FSx Fsx File System Aliase API
+  description: >-
+    The Fsx File System Aliase API from Amazon FSx — 3 operation(s) for fsx file system aliase.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx File System Aliase
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-file-system-aliase-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-operations-api
+  name: Amazon FSx Fsx Operations API
+  description: The Fsx Operations API from Amazon FSx — 12 operation(s) for fsx operations.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-operations-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-snapshot-api
+  name: Amazon FSx Fsx Snapshot API
+  description: The Fsx Snapshot API from Amazon FSx — 4 operation(s) for fsx snapshot.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-snapshot-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-storage-virtual-machine-api
+  name: Amazon FSx Fsx Storage Virtual Machine API
+  description: >-
+    The Fsx Storage Virtual Machine API from Amazon FSx — 4 operation(s) for fsx storage virtual machine.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Storage Virtual Machine
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-storage-virtual-machine-api-openapi.yml
+- aid: amazon-fsx:amazon-fsx-volume-api
+  name: Amazon FSx Fsx Volume API
+  description: The Fsx Volume API from Amazon FSx — 6 operation(s) for fsx volume.
+  humanURL: https://aws.amazon.com/fsx/
+  baseURL: https://fsx.amazonaws.com
+  tags:
+  - Fsx Volume
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-fsx-volume-api-openapi.yml
+common:
+  - type: Plans
+    url: plans/amazon-fsx-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/amazon-fsx-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-fsx-finops.yml
+  - type: CapabilityMap
+    url: capabilities/amazon-fsx-capability-edges.yml
+    name: Amazon FSx Business Capability Map
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-fsx/overview
+  - type: AgenticAccess
+    url: agentic-access/amazon-fsx-agentic-access.yml
+  - type: TrustCenter
+    url: security/amazon-fsx-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-fsx-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-fsx-domain-security.yml
+  - type: Portal
+    url: https://aws.amazon.com/fsx/
+  - type: Website
+    url: https://aws.amazon.com/fsx/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/fsx/
+  - type: TermsOfService
+    url: https://aws.amazon.com/service-terms/
+  - type: PrivacyPolicy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: Blog
+    url: https://aws.amazon.com/blogs/storage/category/storage/amazon-fsx/
+  - type: GitHubOrganization
+    url: https://github.com/aws
+  - type: Console
+    url: https://console.aws.amazon.com/fsx/
+  - type: Signup
+    url: https://portal.aws.amazon.com/billing/signup
+  - type: StatusPage
+    url: https://health.aws.amazon.com/health/status
+  - type: YouTube
+    url: https://www.youtube.com/user/AmazonWebServices
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/amazon-fsx
+  - type: SpectralRules
+    url: rules/amazon-fsx-spectral-rules.yml
+  - type: Vocabulary
+    url: vocabulary/amazon-fsx-vocabulary.yaml
+  - type: JSONLD
+    url: json-ld/amazon-fsx-context.jsonld
+  - type: Features
+    data:
+      - name: Multiple File System Types
+        description: Choose from Lustre, Windows File Server, NetApp ONTAP, and OpenZFS based on workload requirements.
+      - name: High Performance
+        description: FSx for Lustre delivers hundreds of GB/s throughput and millions of IOPS for HPC and ML workloads.
+      - name: Native Compatibility
+        description: Fully compatible with each file system protocol — SMB for Windows, NFS for Linux, POSIX for Lustre.
+      - name: Automatic Backups
+        description: Daily automatic backups stored in Amazon S3 with user-initiated backup support for disaster recovery.
+      - name: Multi-AZ Deployment
+        description: FSx for Windows File Server and ONTAP support Multi-AZ configurations for high availability.
+      - name: Data Repository Integration
+        description: FSx for Lustre integrates natively with Amazon S3 for transparent data import, export, and auto-release.
+      - name: Encryption at Rest
+        description: All file systems are encrypted at rest using AWS KMS with customer-managed key support.
+  - type: UseCases
+    data:
+      - name: HPC and ML Training
+        description: Use FSx for Lustre for fast scratch storage in high-performance computing and distributed ML training jobs.
+      - name: Windows Workloads
+        description: Migrate on-premises Windows file shares to FSx for Windows File Server with Active Directory integration.
+      - name: Enterprise NAS
+        description: Use FSx for NetApp ONTAP for enterprise NAS with SnapMirror replication, FlexClone, and multi-protocol access.
+      - name: DevOps and CI/CD
+        description: Use FSx for OpenZFS for fast NFS shared storage in development, testing, and containerized workflows.
+      - name: Media Processing
+        description: Process high-resolution video and media assets using FSx for Lustre with S3 data repository tiering.
+      - name: Database Backup Storage
+        description: Use FSx for Windows File Server or ONTAP as high-performance backup targets for Oracle, SQL Server, and SAP.
+  - type: Integrations
+    data:
+      - name: Amazon S3
+        description: FSx for Lustre integrates with S3 as a data repository for transparent file import and export.
+      - name: AWS Batch
+        description: Use FSx for Lustre as shared scratch storage for parallel AWS Batch compute jobs.
+      - name: Amazon SageMaker
+        description: Mount FSx for Lustre directly to SageMaker training instances for fast ML dataset access.
+      - name: Amazon ECS and EKS
+        description: Mount FSx volumes as persistent volumes in containerized workloads.
+      - name: AWS Directory Service
+        description: Integrate FSx for Windows File Server and ONTAP with Active Directory for user authentication.
+      - name: AWS Backup
+        description: Centrally manage FSx backup policies across file systems using AWS Backup.
+      - name: AWS KMS
+        description: Encrypt all FSx file systems with customer-managed keys stored in AWS KMS.
+      - name: Amazon CloudWatch
+        description: Monitor FSx throughput, IOPS, and latency metrics with CloudWatch dashboards and alarms.
+  - type: Integrations
+    url: https://aws.amazon.com/marketplace
+integrations:
+  - name: Sign in
+  - name: Agent Mode
+  - name: Why AWS Marketplace?
+  - name: Get started in AWS Marketplace
+  - name: Industry
+  - name: Resources
+  - name: Become a Channel Partner
+  - name: Sell in AWS Marketplace
+  - name: Manage Your Account
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
+aid: amazon-fsx
+specificationVersion: '0.23'
+x-parent: amazon-web-services
+x-relationship: product
